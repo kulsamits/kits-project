@@ -226,35 +226,37 @@
           </div>
           
           <!-- We use formsubmit.co to send the application directly to the email without a backend -->
-<form action="https://formbold.com/s/9XlZM" method="POST" enctype="multipart/form-data" class="apply-form">
+<form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+
+  <input type="hidden" name="access_key" value="51e6e782-d7ca-4ca6-b2fe-ba7984c4a634">
 
   <div class="form-row">
     <div class="form-group">
       <label for="firstName">First Name *</label>
-      <input type="text" id="firstName" name="first_name" class="form-control" required placeholder="John">
+      <input type="text" id="firstName" name="first_name" required placeholder="John">
     </div>
 
     <div class="form-group">
       <label for="lastName">Last Name *</label>
-      <input type="text" id="lastName" name="last_name" class="form-control" required placeholder="Doe">
+      <input type="text" id="lastName" name="last_name" required placeholder="Doe">
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group">
       <label for="email">Email Address *</label>
-      <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
+      <input type="email" id="email" name="email" required placeholder="john@example.com">
     </div>
 
     <div class="form-group">
       <label for="phone">Phone Number *</label>
-      <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+91 00000 00000">
+      <input type="tel" id="phone" name="phone" required placeholder="+91 00000 00000">
     </div>
   </div>
 
   <div class="form-group">
     <label for="role">Role Applied For *</label>
-    <select id="role" name="role" class="form-control form-select" required>
+    <select id="role" name="role" required>
       <option value="" disabled selected>Select a role</option>
       <option value="Senior SAP ABAP Developer">Senior SAP ABAP Developer</option>
       <option value="SAP S/4HANA Consultant">SAP S/4HANA Consultant</option>
@@ -268,27 +270,26 @@
 
   <div class="form-group">
     <label for="experience">Years of SAP Experience *</label>
-    <input type="number" id="experience" name="experience" class="form-control" required min="0" max="40" placeholder="e.g. 5">
+    <input type="number" id="experience" name="experience" min="0" max="40" required placeholder="e.g. 5">
   </div>
 
+  <!-- FIXED FILE INPUT -->
   <div class="form-group">
     <label for="resume">Upload Resume (PDF, DOCX) *</label>
     <input type="file"
            id="resume"
-           name="resume"
-           class="form-control"
+           name="attachment"
            accept=".pdf,.doc,.docx"
            required>
   </div>
 
   <div class="form-group">
     <label for="message">Cover Letter / Additional Information</label>
-    <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us why you'd be a great fit..."></textarea>
+    <textarea id="message" name="message" rows="4"></textarea>
   </div>
 
-  <button type="submit" class="btn btn-primary submit-btn">
+  <button type="submit">
     Submit Application
-    <span class="material-icons-round">send</span>
   </button>
 
 </form>
