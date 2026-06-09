@@ -226,56 +226,62 @@
           </div>
           
           <!-- We use formsubmit.co to send the application directly to the email without a backend -->
-<form action="https://formbold.com/s/9xVdR" method="POST" enctype="multipart/form-data" class="apply-form">
+<form action="https://formsubmit.co/careers.kulsamits@gmail.com"
+      method="POST"
+      enctype="multipart/form-data">
+
+  <!-- Optional settings -->
+  <input type="hidden" name="_subject" value="New Job Application">
+  <input type="hidden" name="_captcha" value="false">
 
   <div class="form-row">
     <div class="form-group">
       <label for="firstName">First Name *</label>
-      <input type="text" id="firstName" name="first_name" class="form-control" required placeholder="John">
+      <input type="text" id="firstName" name="first_name" class="form-control" required>
     </div>
 
     <div class="form-group">
       <label for="lastName">Last Name *</label>
-      <input type="text" id="lastName" name="last_name" class="form-control" required placeholder="Doe">
+      <input type="text" id="lastName" name="last_name" class="form-control" required>
     </div>
   </div>
 
   <div class="form-row">
     <div class="form-group">
       <label for="email">Email Address *</label>
-      <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
+      <input type="email" id="email" name="email" class="form-control" required>
     </div>
 
     <div class="form-group">
       <label for="phone">Phone Number *</label>
-      <input type="tel" id="phone" name="phone" class="form-control" required placeholder="+91 00000 00000">
+      <input type="tel" id="phone" name="phone" class="form-control" required>
     </div>
   </div>
 
   <div class="form-group">
     <label for="role">Role Applied For *</label>
-    <select id="role" name="role" class="form-control form-select" required>
+    <select id="role" name="role" class="form-control" required>
       <option value="" disabled selected>Select a role</option>
-      <option value="Senior SAP ABAP Developer">Senior SAP ABAP Developer</option>
-      <option value="SAP S/4HANA Consultant">SAP S/4HANA Consultant</option>
-      <option value="SAP BTP / CAP Developer">SAP BTP / CAP Developer</option>
-      <option value="SAP Fiori / UI5 Developer">SAP Fiori / UI5 Developer</option>
-      <option value="SAP EWM Specialist">SAP EWM Specialist</option>
-      <option value="SAP TM Specialist">SAP TM Specialist</option>
-      <option value="Other">Other</option>
+      <option>Senior SAP ABAP Developer</option>
+      <option>SAP S/4HANA Consultant</option>
+      <option>SAP BTP / CAP Developer</option>
+      <option>SAP Fiori / UI5 Developer</option>
+      <option>SAP EWM Specialist</option>
+      <option>SAP TM Specialist</option>
+      <option>Other</option>
     </select>
   </div>
 
   <div class="form-group">
     <label for="experience">Years of SAP Experience *</label>
-    <input type="number" id="experience" name="experience" class="form-control" required min="0" max="40" placeholder="e.g. 5">
+    <input type="number" id="experience" name="experience" class="form-control" min="0" max="40" required>
   </div>
 
   <div class="form-group">
-    <label for="resume">Upload Resume (PDF, DOCX) *</label>
+    <label for="resume">Upload Resume (PDF, DOC, DOCX) *</label>
     <input type="file"
            id="resume"
-           name="resume"
+           name="attachment"
            class="form-control"
            accept=".pdf,.doc,.docx"
            required>
@@ -283,12 +289,11 @@
 
   <div class="form-group">
     <label for="message">Cover Letter / Additional Information</label>
-    <textarea id="message" name="message" class="form-control" rows="4" placeholder="Tell us why you'd be a great fit..."></textarea>
+    <textarea id="message" name="message" class="form-control" rows="4"></textarea>
   </div>
 
   <button type="submit" class="btn btn-primary submit-btn">
     Submit Application
-    <span class="material-icons-round">send</span>
   </button>
 
 </form>
